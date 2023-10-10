@@ -198,3 +198,64 @@ console.log("\n");
 console.log("### PROCEDURE ###");
 console.log("Não tem PROCEDURE");
 console.log("\n");
+
+
+// PONTEIRO
+console.log("### PONTEIRO ###");
+console.log("Não tem PONTEIRO");
+console.log("Não é necessário liberar memória manualmente, como em C ou C++. A variável será automaticamente coletada pelo coletor de lixo quando não estiver mais em uso. \n");
+console.log("\n");
+
+// TRY
+console.log("### TRY ###");
+let numero1 = parseInt(readline.question("Digite o valor 1 para o dividendo: "));
+console.log("\n");
+let numero2 = parseInt(readline.question("Digite o valor 2 para o divisor: "));
+console.log("\n");
+
+try {
+  if (isNaN(numero1) || isNaN(numero2)) {
+    throw new Error('Entrada inválida!');
+  }
+  if (numero2 === 0) {
+    throw new Error('Divisão por zero não é permitida!');
+  }
+  const res = numero1 / numero2;
+  console.log(`Resultado da divisão: ${res}`);
+} catch (error) {
+  console.error('Ocorreu uma exceção:', error.message);
+}
+console.log("\n");
+
+// ENUM
+console.log("### ENUM ###");
+const Cor = {
+    Vermelho: 'vermelho',
+    Verde: 'verde',
+    Azul: 'azul',
+    Amarelo: 'amarelo',
+    Laranja: 'laranja'
+};
+
+const minhaCor = Cor.Azul;
+
+switch (minhaCor) {
+    case Cor.Vermelho:
+        console.log('Minha cor favorita é vermelho.');
+        break;
+    case Cor.Verde:
+        console.log('Minha cor favorita é verde.');
+        break;
+    case Cor.Azul:
+        console.log('Minha cor favorita é azul.');
+        break;
+    case Cor.Amarelo:
+        console.log('Minha cor favorita é amarelo.');
+        break;
+    case Cor.Laranja:
+        console.log('Minha cor favorita é laranja.');
+        break;
+    default:
+        console.log('Eu não tenho uma cor favorita.');
+}
+console.log("\n");
